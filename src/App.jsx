@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <GoogleOAuthProvider clientId="http://202783816034-9to29ngs05ljfp5hk0cjn88c5jtbotri.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="202783816034-9to29ngs05ljfp5hk0cjn88c5jtbotri.apps.googleusercontent.com">
    <BrowserRouter>
    <Toaster position="top-center"/>
       <div className="w-full h-screen">
