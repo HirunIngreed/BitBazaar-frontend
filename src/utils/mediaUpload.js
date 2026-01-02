@@ -1,0 +1,37 @@
+import { createClient } from "@supabase/supabase-js";
+
+const url = import.meta.env.VITE_SUPABASE_URL
+const key = import.meta.env.VITE_SUPABASE_KEY
+
+const supabase = createClient(url,key)
+
+export default function mediaUpload(file){
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            if (!file) {
+                reject("No files selected")
+                return
+            }
+
+            const timestamp = Date.now()
+            const fileName = timestamp+"_"+file.name
+
+            supabase.storage.from("images").upload(fileName,file,{
+                cacheControl:"3600",
+                upsert:false
+            }
+            ).then(
+                ()=>{
+                    const publicUrl = supabase.storage.from("images").getPublicUrl(fileName).data.publicUrl
+                    resolve(publicUrl)
+                }
+            ).catch(
+                (error)=>{
+                    reject(error)
+                }
+            )
+        }
+    )
+}
