@@ -40,7 +40,7 @@ function scroll (direction){
         <div className="w-full h-screen flex">
             <div className="w-full h-screen flex relative">
             
-                <div className="w-full h-screen bg-[url(home.jpg)] relative lg:overflow-y-scroll overflow-hidden">
+                <div className="w-full h-screen bg-[url(/public/home.jpg)] relative lg:overflow-y-scroll overflow-hidden">
             
             <button className="fixed top-3.5 left-3.5 text-2xl lg:hidden z-50" onClick={()=>{setIsToggel(!isToggel)}}><IoIosList /></button>
             <RiShoppingBag2Line className="text-2xl cursor-pointer fixed top-3.5 right-3.5 lg:hidden" onClick={()=>{navigate("/cart")}}/>
