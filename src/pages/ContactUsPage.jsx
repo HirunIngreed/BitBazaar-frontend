@@ -28,7 +28,7 @@ export default function ContactUsPage(){
     } 
 
     return(
-        <div className="w-full h-screen flex flex-col bg-[url(home.jpg)]">
+        <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')]">
             <div className="hidden lg:flex"><Header/></div>
 
             <div className="w-full h-[calc(100vh-100px)] flex lg:flex-row flex-col">

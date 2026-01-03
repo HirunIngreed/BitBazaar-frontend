@@ -70,7 +70,7 @@ export default function CheckoutPage(){
     }
     
     return(
-        <div className="w-full h-screen flex flex-col bg-[url(home.jpg)]">
+        <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')]">
             {isLoading && <Loader/>}
             <div className="w-full h-[100px] hidden lg:flex"><Header/></div>
             <div className="w-full h-[calc(100%-100px)] flex overflow-y-scroll">

@@ -9,7 +9,7 @@ export default function CartPage(){
     const [isLoading,setIsLoading] = useState(false)
     const navigate = useNavigate()
     return(
-        <div className="w-full h-screen flex flex-col bg-[url(home.jpg)]">
+        <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')]">
             <div className="w-full h-[100px] hidden lg:flex"><Header/></div>
             <div className="w-full h-[calc(100%-100px)] lg:flex-row overflow-y-scroll flex flex-col  items-center">
                 <div className="lg:w-[80%] w-full h-full flex">
