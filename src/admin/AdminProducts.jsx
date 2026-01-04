@@ -33,7 +33,7 @@ export default function AdminProducts(){
                     </div>
                     }
                     <Link className="text-4xl fixed bottom-3 right-3 cursor-pointer " to="/admin/add-products"><AiFillPlusSquare /></Link>
-                    <table className="w-full ">
+                    <table className={(products.length==0)?"hidden":"w-full "}>
                         <thead className="font-mono">
                             <tr className="lg:text-2xl text-1">
                                 <th>Name</th>

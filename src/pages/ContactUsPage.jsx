@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../compenents/Header";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { IoArrowBackSharp } from "react-icons/io5";
 
 export default function ContactUsPage(){
     const[firstName,setFirstName] = useState("")
@@ -29,6 +30,7 @@ export default function ContactUsPage(){
 
     return(
         <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')]">
+            <IoArrowBackSharp className="text-2xl fixed top-3.5 left-3.5 z-50 lg:hidden" onClick={()=>{navigate("/")}}/>
             <div className="hidden lg:flex"><Header/></div>
 
             <div className="w-full h-[calc(100vh-100px)] flex lg:flex-row flex-col">

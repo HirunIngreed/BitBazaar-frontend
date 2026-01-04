@@ -41,7 +41,7 @@ export default function AdminUsers(){
                 isLoading && <Loader/>
             }
                 <div className="w-[95%] h-[95%] rounded-2xl overflow-y-auto bg-gray-300">
-                    <table className="w-full border-separate border-spacing-y-4 text-center table-fixed">
+                    <table className={(users.length==0)?"hidden":"w-full border-separate border-spacing-y-4 text-center table-fixed"}>
                         <thead>
                             <tr>
                                 <th className="font-mono font-bold text-xl lg:text-2xl">Name</th>

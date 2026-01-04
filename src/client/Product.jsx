@@ -3,11 +3,14 @@ import Header from "../compenents/Header";
 import axios from "axios";
 import toast from "react-hot-toast";
 import ProductCard from "../compenents/ProductCard";
+import { IoArrowBackSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 export default function Products(){
 
     const [products,setProducts] = useState([])
     const [isLoading,setIsLoading] = useState(false)
+    const navigate = useNavigate()
     
 
     const token = localStorage.getItem("token")
@@ -34,6 +37,7 @@ export default function Products(){
 
     return(
         <div className="w-full h-screen">
+            <IoArrowBackSharp className="text-2xl fixed top-3.5 left-3.5 z-50 lg:hidden" onClick={()=>{navigate("/")}}/>
             <div className="flex  lg:flex flex-col ">
                 <div className="hidden lg:flex"><Header /></div>
                 <div className="w-full h-[50px] flex items-center justify-center sticky top-0">

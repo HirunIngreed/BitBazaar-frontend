@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { RxCross2 } from "react-icons/rx";
 import Loader from "../compenents/Loader";
+import { IoArrowBackSharp } from "react-icons/io5";
 
 export default function CheckoutPage(){
     const location = useLocation()
@@ -71,6 +72,7 @@ export default function CheckoutPage(){
     
     return(
         <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')]">
+            <IoArrowBackSharp className="text-2xl fixed top-3.5 left-3.5 z-50 lg:hidden" onClick={()=>{navigate("/")}}/>
             {isLoading && <Loader/>}
             <div className="w-full h-[100px] hidden lg:flex"><Header/></div>
             <div className="w-full h-[calc(100%-100px)] flex overflow-y-scroll">

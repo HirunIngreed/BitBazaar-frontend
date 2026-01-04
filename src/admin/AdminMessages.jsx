@@ -35,7 +35,7 @@ export default function AdminMessages(){
                         No Messages Found
                     </div>
                 }
-                <table className="w-full text-center border-separate border-spacing-y-4">
+                <table className={(messages.length==0)?"hidden":"w-full text-center border-separate border-spacing-y-4"}>
                     <thead className="text-2xl font-mono">
                         <tr>
                             <th>Name</th>

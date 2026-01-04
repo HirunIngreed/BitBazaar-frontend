@@ -13,6 +13,7 @@ import { IoIosArrowBack, IoIosArrowForward, IoIosList } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import { BsTruck } from "react-icons/bs";
 import OrderReviewCoustomer from "../compenents/OrderReviewCostomer";
+import UserData from "../compenents/UserData";
 
 
 
@@ -38,9 +39,12 @@ function scroll (direction){
 
     return(
         <div className="w-full h-screen flex">
+           
             <div className="w-full h-screen flex relative">
             
                 <div className="w-full h-screen bg-[url('/home.jpg')] relative lg:overflow-y-scroll overflow-hidden">
+
+                 <div className="absolute left-10"><UserData /></div>
             
             <button className="fixed top-3.5 left-3.5 text-2xl lg:hidden z-50" onClick={()=>{setIsToggel(!isToggel)}}><IoIosList /></button>
             <RiShoppingBag2Line className="text-2xl cursor-pointer fixed top-3.5 right-3.5 lg:hidden" onClick={()=>{navigate("/cart")}}/>
@@ -67,7 +71,7 @@ function scroll (direction){
                 </div>
 
                 <div className="w-[150px] h-[50px] flex items-center justify-center  my-4">
-                        <Link to="/contactus" className="text-2xl bottom-2 font-mono z-50" onClick={()=>{setIsToggel(!isToggel)}}>Contact us</Link>
+                        <Link to="/contact" className="text-2xl bottom-2 font-mono z-50" onClick={()=>{setIsToggel(!isToggel)}}>Contact us</Link>
                 </div>
 
             </div>
@@ -90,7 +94,7 @@ function scroll (direction){
                     <div className="w-[800px] h-[100px] flex absolute lg:top-[350px] top-[500px] items-center justify-center">
 
                         <h1 className="text-7xl hidden lg:flex cursor-pointer"><IoIosArrowBack onClick={()=>{scroll("left")}}/></h1>
-                        <div ref={scrollRef} className={(isToggel?"hidden lg:flex lg:w-[700px] lg:h-[100px] bg-[#818f88] rounded-2xl lg:top-[350px] flex pl-5 pr-5 justify-center items-center overflow-x-scroll scrollbar-hide mx-10 overflow-y-hidden ":"lg:w-[700px] lg:h-[100px] w-[100px] h-[500px] bg-[#818f88] rounded-2xl lg:top-[350px] flex pl-5 pr-5 justify-center items-center overflow-x-scroll scrollbar-hide mx-10 overflow-y-hidden")} >
+                        <div ref={scrollRef} className={(isToggel?"hidden lg:flex lg:w-[700px] lg:h-[100px] bg-[#818f88] rounded-2xl lg:top-[350px] flex pl-5 pr-5 justify-center items-center overflow-x-scroll scrollbar-hide mx-10 overflow-y-hidden ":"lg:w-[700px] lg:h-[100px] w-[100px] h-[500px] bg-[#818f88] rounded-2xl lg:top-[350px] flex pl-5 pr-5 justify-center items-center overflow-x-scroll scrollbar-hide mx-10 overflow-y-hidden  hidden lg:flex")} >
 
                             
                         
@@ -108,7 +112,15 @@ function scroll (direction){
                             <Link className="h-full aspect-square text-[85px] hover:scale-110 duration-150 p-[20px] cursor-pointer"title="Others" to="/category/Others"><TfiMoreAlt /></Link>
                         </div>
 
-                        <div className="w-[100px] h-[500px] flex lg:hidden flex-col items-center  overflow-scroll">
+                        
+
+                    
+                        
+                </div>
+                <h1 className="text-7xl hidden lg:flex cursor-pointer"><IoIosArrowForward onClick={()=>{scroll("right")}}/></h1>
+                </div>
+
+                <div className={(isToggel&&"hidden ")+"w-[100px] h-[500px] flex lg:hidden flex-col items-center  overflow-scroll bg-[#818f88] fixed top-[250px] rounded-2xl scrollbar-hide"}>
                             <Link className="text-6xl" to="/category/KeyBoard"><FaRegKeyboard /></Link>
                             <Link className="text-6xl" to="/category/Mouse"><MdOutlineMouse /></Link>
                             <Link className="text-6xl" to="/category/RAM"><RiRamLine /></Link>
@@ -121,13 +133,6 @@ function scroll (direction){
                             <Link className="text-6xl" to="/category/Monitors"><LuMonitor /></Link>
                             <Link className="text-6xl" to="/category/Others"><TfiMoreAlt /></Link>
                         </div>
-
-                    
-                        
-                </div>
-                <h1 className="text-7xl hidden lg:flex cursor-pointer"><IoIosArrowForward onClick={()=>{scroll("right")}}/></h1>
-                </div>
-
 
             </div>
 

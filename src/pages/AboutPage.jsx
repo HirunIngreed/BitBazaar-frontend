@@ -1,8 +1,10 @@
+import { IoArrowBackSharp } from "react-icons/io5";
 import Header from "../compenents/Header";
 
 export default function AboutPage(){
     return(
         <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')] overflow-y-auto ">
+            <IoArrowBackSharp className="text-2xl fixed top-3.5 left-3.5 z-50 lg:hidden" onClick={()=>{navigate("/")}}/>
             <div className="w-full h-[100px] hidden lg:flex"><Header/></div>
             <div className="w-full h-[calc(100vh-100px)] lg:flex-row flex flex-col items-center justify-center">
 
@@ -15,7 +17,7 @@ export default function AboutPage(){
                 </div>
 
                 <div className="w-[50%] h-full flex items-center justify-center hidden lg:flex">
-                    <div className="w-[calc(100%-50px)] h-[calc(100%-50px)] shadow-2xl  bg-white rounded-2xl">
+                    <div className="lg:w-[calc(100%-50px)] lg:h-[calc(100%-50px)] w-[90%] h-[90%] shadow-2xl overflow-y-auto bg-white rounded-2xl">
                         <div className="w-full h-[calc(100%/1/3)] flex">
                             <div className="w-[50%] bg-[url('/laptop.jpg')] bg-cover rounded-xl"></div>
                             <div className="w-[50%] hidden lg:flex"></div>

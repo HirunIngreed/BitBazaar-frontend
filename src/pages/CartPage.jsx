@@ -3,6 +3,7 @@ import Header from "../compenents/Header";
 import { addCart, getCart, getCartTotal } from "../utils/cart";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { IoArrowBackSharp } from "react-icons/io5";
 
 export default function CartPage(){
     const [cart,setCart] = useState(getCart())
@@ -10,6 +11,7 @@ export default function CartPage(){
     const navigate = useNavigate()
     return(
         <div className="w-full h-screen flex flex-col bg-[url('/home.jpg')]">
+            <IoArrowBackSharp className="text-2xl fixed top-3.5 left-3.5 z-50 lg:hidden" onClick={()=>{navigate("/")}}/>
             <div className="w-full h-[100px] hidden lg:flex"><Header/></div>
             <div className="w-full h-[calc(100%-100px)] lg:flex-row overflow-y-scroll flex flex-col  items-center">
                 <div className="lg:w-[80%] w-full h-full flex">
@@ -79,7 +81,7 @@ export default function CartPage(){
                         </div>
 
                         <div className="flex w-full h-[100px] justify-center items-center ">
-                            <button className="w-[150px] h-[50px] bg-[#83AF9B] rounded-2xl hover:rounded-full active:bg-[#6d9080] font-semibold font-mono" onClick={()=>{navigate('/cart/checkout',{state : cart})}}>{isLoading ? <div className="w-[35px] h-[35px] border-2 border-t-transparent animate-spin rounded-full"></div> : <h1>Chechout</h1>}</button>
+                            <button className="w-[150px] h-[50px] bg-[#83AF9B] rounded-2xl hover:rounded-full active:bg-[#6d9080] font-semibold font-mono" onClick={()=>{navigate('/cart/checkout',{state : cart})}}>{isLoading ? <div className="w-[35px] h-[35px] border-2 border-t-transparent animate-spin rounded-full"></div> : <h1>Checkout</h1>}</button>
                         </div>
 
                     </div>

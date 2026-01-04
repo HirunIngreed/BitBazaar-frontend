@@ -52,7 +52,7 @@ export default function AdminOrders(){
                         No Orders Found
                     </div>
                     }
-                    <table className="w-full border-separate border-spacing-y-4 text-center">
+                    <table className={(orders.length==0)?"hidden":"w-full border-separate border-spacing-y-4 text-center"}>
                         <thead>
                             <tr>
                                 <th className="lg:text-2xl text-xl font-mono">Order ID</th>
