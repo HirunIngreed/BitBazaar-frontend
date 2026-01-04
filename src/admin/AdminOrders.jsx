@@ -46,6 +46,12 @@ export default function AdminOrders(){
                isLoading&&<Loader/>
             }
                 <div className="w-[95%] h-[95%] rounded-2xl lg:overflow-y-auto bg-gray-300 overflow-x-scroll">
+                    {
+                    orders.length==0&&
+                    <div className="w-full h-full flex items-center justify-center text-2xl font-mono">
+                        No Orders Found
+                    </div>
+                    }
                     <table className="w-full border-separate border-spacing-y-4 text-center">
                         <thead>
                             <tr>

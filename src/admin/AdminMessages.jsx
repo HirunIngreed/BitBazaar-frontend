@@ -29,6 +29,12 @@ export default function AdminMessages(){
         <div className="w-full h-screen flex items-center justify-center">
 
             <div className="w-[95%] h-[95%] rounded-2xl lg:overflow-y-auto bg-gray-300 overflow-x-scroll">
+                {
+                    messages.length==0&&
+                    <div className="w-full h-full flex items-center justify-center text-2xl font-mono">
+                        No Messages Found
+                    </div>
+                }
                 <table className="w-full text-center border-separate border-spacing-y-4">
                     <thead className="text-2xl font-mono">
                         <tr>

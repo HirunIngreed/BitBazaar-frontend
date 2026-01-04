@@ -26,6 +26,12 @@ export default function AdminProducts(){
     return(
         <div className="w-full h-screen overflow-y-scroll flex items-center justify-center ">
                 <div className="w-[95%] h-[95%] rounded-2xl lg:overflow-y-auto bg-gray-300 overflow-x-scroll">
+                    {
+                    products.length==0&&
+                    <div className="w-full h-full flex items-center justify-center text-2xl font-mono">
+                        No Products Found
+                    </div>
+                    }
                     <Link className="text-4xl fixed bottom-3 right-3 cursor-pointer " to="/admin/add-products"><AiFillPlusSquare /></Link>
                     <table className="w-full ">
                         <thead className="font-mono">
