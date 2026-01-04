@@ -24,7 +24,7 @@ export default function ReviewPage(){
     ),[]
 
     return(
-        <div className="w-full h-screen bg-[url(home.jpg)] flex-row">
+        <div className="w-full h-screen bg-[url(/home.jpg)] flex-row">
             <AiFillPlusSquare className="text-5xl fixed bottom-5 right-5 cursor-pointer" onClick={()=>{setIsToggel(true)}}/>
             {
                 isToggel && <AddReviews toggel={()=>{setIsToggel(false)}}/>
