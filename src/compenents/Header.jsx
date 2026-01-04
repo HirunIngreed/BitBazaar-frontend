@@ -13,7 +13,7 @@ export default function Header(){
     return(
             <>
                 <div className="lg:w-full lg:h-[100px] h-full bg-[#83AF9B] rounded-b-xl flex">
-                    <img src="logo.png" className="h-full aspect-square hidden lg:flex"/>
+                    <img src="/logo.png" className="h-full aspect-square hidden lg:flex"/>
 
                     <div className="w-[calc(100%-200px)] h-full flex justify-center items-center">
                         <div className="w-[150px] h-full flex items-center justify-center ">
