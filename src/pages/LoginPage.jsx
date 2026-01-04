@@ -71,7 +71,7 @@ export default function LoginPage (){
     }
 
     return(
-        <div className="w-full h-screen bg-[url(login.jpg)] bg-cover bg-center flex">
+        <div className="w-full h-screen bg-[url(/login.jpg)] bg-cover bg-center flex">
 
             <div className="w-full h-full bg-black/45 flex">
             
