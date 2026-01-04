@@ -44,7 +44,7 @@ function scroll (direction){
             
                 <div className="w-full h-screen bg-[url('/home.jpg')] relative lg:overflow-y-scroll overflow-hidden">
 
-                 <div className="absolute left-10"><UserData /></div>
+                 <div className="absolute left-10 lg:hidden"><UserData /></div>
             
             <button className="fixed top-3.5 left-3.5 text-2xl lg:hidden z-50" onClick={()=>{setIsToggel(!isToggel)}}><IoIosList /></button>
             <RiShoppingBag2Line className="text-2xl cursor-pointer fixed top-3.5 right-3.5 lg:hidden" onClick={()=>{navigate("/cart")}}/>
