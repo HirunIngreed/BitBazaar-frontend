@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { AiOutlineProduct } from "react-icons/ai"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import mediaUpload from "../utils/mediaUpload"
 import axios from "axios"
 import toast from "react-hot-toast"
@@ -21,11 +21,19 @@ export default function AdminUpdateProducts(){
     const [model,setModel] = useState(location.state.model)
     const [images,setImages] = useState([])
     const [isLoading,setIsLoading] = useState(false)
+    const navigate = useNavigate()
 
 
     async function handleUpdateProduct (){
         try {
             setIsLoading(true)
+
+            if(name==location.state.name || altNames==location.state.altNames.join(",") || description==location.state.description || brand==location.state.brand || category==location.state.category || isAvailable==location.state.isAvailable || price==location.state.price || labeledPrice==location.state.labeledPrice || stock==location.state.stock || model==location.state.model || images.length==0){
+                toast.error("No changes made to update")
+                setIsLoading(false)
+                return
+            }
+
             const altNamesArray = altNames.split(",")
 
             let available
@@ -75,6 +83,7 @@ export default function AdminUpdateProducts(){
             })
             toast.success("Product updated successfully")
             setIsLoading(false)
+            navigate("/admin/products")
 
             
         } catch (error) {
