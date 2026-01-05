@@ -53,7 +53,7 @@ export default function FogeTPassword(){
     }
 
     return(
-        <div className="w-full h-screen flex bg-[url(home.jpg)] items-center justify-center">
+        <div className="w-full h-screen flex bg-[url(/home.jpg)] items-center justify-center ">
             <div className="lg:w-[600px] lg:h-[650px] w-[99%] h-[99%] bg-white rounded-2xl shadow-2xl flex items-center justify-center flex-col gap-7">
                 <div className="flex flex-col items-center">
                     <label className="text-xl font-mono">Enter your email</label>
