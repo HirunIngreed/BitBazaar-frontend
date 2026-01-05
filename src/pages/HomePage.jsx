@@ -99,7 +99,7 @@ function scroll (direction){
                             
                         
                         <div className="w-full scrollbar lg:flex relative items-center hidden lg:flex">
-                            <Link className="h-full aspect-square text-[85px] hover:scale-110 duration-150 p-[20px] cursor-pointer" title="KeyBoards" to="/category/KeyBords"><FaRegKeyboard /></Link>
+                            <Link className="h-full aspect-square text-[85px] hover:scale-110 duration-150 p-[20px] cursor-pointer" title="KeyBoards" to="/category/KeyBord"><FaRegKeyboard /></Link>
                             <Link className="h-full aspect-square text-[85px] hover:scale-110 duration-150 p-[20px] cursor-pointer"title="Mouses" to="/category/Mouse"><MdOutlineMouse /></Link>
                             <Link className="h-full aspect-square text-[85px] hover:scale-110 duration-150 p-[20px] cursor-pointer"title="RAMs"to="/category/RAM"><RiRamLine /></Link>
                             <Link className="h-full aspect-square text-[85px] hover:scale-110 duration-150 p-[20px] cursor-pointer"title="Graphic Cards" to="/category/GraphicCards"><PiGraphicsCard /></Link>
