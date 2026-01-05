@@ -25,14 +25,16 @@ export default function AdminProducts(){
 
     return(
         <div className="w-full h-screen overflow-y-scroll flex items-center justify-center ">
+            <Link className="text-4xl fixed bottom-3 right-3 cursor-pointer " to="/admin/add-products"><AiFillPlusSquare /></Link>
                 <div className="w-[95%] h-[95%] rounded-2xl lg:overflow-y-auto bg-gray-300 overflow-x-scroll">
                     {
-                    products.length==0&&
+                    products.length==0?
                     <div className="w-full h-full flex items-center justify-center text-2xl font-mono">
                         No Products Found
-                    </div>
-                    }
-                    <Link className="text-4xl fixed bottom-3 right-3 cursor-pointer " to="/admin/add-products"><AiFillPlusSquare /></Link>
+                    </div>:
+                    
+                    <div className="w-[95%] h-[95%] rounded-2xl lg:overflow-y-auto bg-gray-300 overflow-x-scroll">
+                        
                     <table className={(products.length==0)?"hidden":"w-full "}>
                         <thead className="font-mono">
                             <tr className="lg:text-2xl text-1">
@@ -65,6 +67,8 @@ export default function AdminProducts(){
                             }
                         </tbody>
                     </table>
+                    </div>
+                        }
                 </div>
         </div>
     )
