@@ -11,7 +11,7 @@ export default function ProductCard(props){
     return(
         <div className="lg:w-[350px] lg:h-[275px] w-[200px] h-[300px] rounded-2xl shadow-2xl  flex  relative flex-col transition duration-500 transform hover:scale-110 m-3 hover:[&_.buttons]:opacity-100">
 
-           <img className="w-full h-[185px] rounded-t-2xl object-cover object-center" src={product.images[0]}/>
+           <img className="w-full h-[185px] rounded-t-2xl object-contain" src={product.images[0]}/>
 
            <div className="w-full h-[90px] rounded-b-2xl flex relative">
                 <div className="w-[50%] h-full items-center justify-center flex">
